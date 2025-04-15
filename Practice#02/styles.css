@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* ----------------------------------------------
+    1) Introducing Selectors & Basic Properties
+-------------------------------------------------*/
+
 /* Universal Selector*/
 * {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", Times, serif; /* Backup Fonts times & serif ++ Parent Class) */
 }
 
 /* Element Selector */
@@ -26,7 +31,66 @@ body{
     color: #81da76;
 }
 
-/* ID Selector */
+/* ID Selector (Can only be used one or target one element */
 #hero__highlight{
     color: #dbfbe0;
+}
+
+/* ----------------------------------------------
+    2) Fonts - Features Section
+-------------------------------------------------*/
+
+.feature{
+    padding: 100px; /*Outside the element*/
+}
+
+.feature__item{
+    padding: 30px 0; /* Sets the padding up and down */
+}
+
+.feature__titles{
+    font-size: 2.2rem; /* em: giant text | rem: relative text makes it consistent across browswers*/
+    font-weight: 500;
+    text-transform: uppercase;
+    color:#81da76;
+    margin-bottom: 10px; /*outside of the padding*/
+}
+
+.feature__title--selected{
+    text-decoration: underline;
+}
+
+/* .feature__description{
+    text-align: right;
+    letter-spacing: 0.5rem;
+    line-height: 2.4rem;
+    word-spacing: 3rem;
+    white-space: pre-wrap;
+} */
+
+/* rem based on screensize (preferred) */
+
+/* ----------------------------------------------
+    3) Colors - Call to Action
+-------------------------------------------------*/
+
+.cta{
+    padding: 100px;
+    background-color: #5bb471; /* can use rgb(a,b,c, or transparancy(1)) */
+    color: #fff;
+    text-align: center;
+}
+
+.cta__description{
+    padding: 15px 0;
+    color: #dbdbdb
+}
+
+button{
+    color: none;
+    border: none;
+}
+
+.cta__button{
+    padding: 10px 20px; /*(y axis, x axis)*/
 }
