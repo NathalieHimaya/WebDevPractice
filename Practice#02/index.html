@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     </head>
 
     <body>
@@ -63,8 +63,65 @@
          </section>
 
          <!-- Section 4) Box Model -->
-          
+        <section class="video">
+          <h3 class="video__title">Grow Your Child's Feature</h3>
+          <p class="video__description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum odio quos beatae numquam laborum ea impedit vero ipsa molestias, 
+            quo, soluta voluptates tempore totam accusamus excepturi exercitationem enim repudiandae doloremque!
+          </p>
+          <div class="video__controls">
+            <button class="video__button video__button--primary">
+                <i class="fas fa-book"></i> Learn more
+            </button>
+            <button class="video__button video__button--secondary">
+                <i class="fas fa-play-circle"></i> Watch Video
+            </button>
+          </div>
+          <div class="video__container"></div> 
+        </section> 
 
+        <!-- Section 5)Flex - Programs Section -->
+        <section class="programs">
+        <h2> Explore Our State of the Art Facilities and Enriching Learning Experience</h2>
+        <div class="program__cards">
+            <div class="program_card"></div>
+            <div class="program_card"></div>
+            <div class="program_card"></div>
+        </div>
+         </section>
+
+        <!-- 6) HTML Elements  & Images & Form Section -->
+         <section class="element">
+            <div class="element__left">
+                <div class="element__placeholder"></div>
+            </div>
+            <div class="element__right">
+                <h2>Sign Up Today Now!</h2>
+                <p class="element_subtitle"> Fill out the form below to sign up for our newletter and related updates</p>
+                <form class="element_form">
+                    <h3>Your Interest:</h3>
+                    <ul class="element__list">
+                        <li class="element__list-item">Web Development</li>
+                        <li class="element__list-item">Web UI/UX Design</li>
+                        <li class="element__list-item">Digital Marketing</li>
+                    </ul>
+                    <div class="element__form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Enter Username"/>
+                    </div>
+                    <div class="element__form-group">
+                        <label for="username">Select Course:</label>
+                        <select id="course">
+                            <option value="">Choose a course...</option>
+                            <option value="html">HTML & CSS</option>
+                            <option value="js">Javascipt</option>
+                            <option value="react">React</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="element__button">Submit Form</button>
+                </form>
+            </div>
+         </section>
     </body>
 
 </html>
