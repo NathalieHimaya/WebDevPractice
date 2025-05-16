@@ -12,6 +12,27 @@
 
 const prompt = require("prompt-sync")(); //package that allows us to get user input
 
+const ROWS = 3;
+const COLS = 3;
+
+const SYMBOLS_COUNT ={
+    "A": 2,
+    "B": 4,
+    "C": 6,
+    "D": 8
+}
+
+const SYMBOL_VALUES ={
+    "A": 5,
+    "B": 4,
+    "C": 3,
+    "D": 2
+}
+
+
+
+
+//Function Definitions
 const deposit = () => {
     while(true){
         const depositAmount = prompt("Enter a deposit amount: "); //need to convert to a int since it auto returns string also we need to subtract
@@ -40,19 +61,31 @@ const getNumberOfLines = () => {
     }
 };
 
-const getBet = (balance) =>{
-    const bet = prompt("Enter the total bet: "); //need to convert to a int since it auto returns string also we need to subtract
+const getBet = (balance, lines) =>{
+    while(true){
+    const bet = prompt("Enter the bet per line: "); //need to convert to a int since it auto returns string also we need to subtract
     const numberBet = parseFloat(bet); //paseFloat changes string to a float
 
         // if Not a Number 
-    if (isNaN(numberBet) || numberBet <= 0 || numberBet > balance){
+    if (isNaN(numberBet) || numberBet <= 0 || numberBet > balance/lines){
             console.log("Invalid bet, try again");
     } else{
         return numberBet;
          }
+    }   
 };
 
+const spin =() =>{
+    const symbols = []; //can manipulate the element not the reference
+    for (const [symbol,count] of Object.entries(SYMBOLS_COUNT)){ 
+        for (let i = 0; i < count; i++) {
+            symbol.push(symbol);
+        }
+        }
+        console.log(symbols);
+};
+
+spin();
 let balance = deposit();
 const numberOfLines = getNumberOfLines();
-const bet = getBet(balance);
-console.log(DepositAmount);
+const bet = getBet(balance,numberOfLines);
